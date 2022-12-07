@@ -3,3 +3,36 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Comfortaa:wght@400;600;700&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: "Balsamiq Sans", cursive;
+  color: #474e52;
+  background-color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #cccccc;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
