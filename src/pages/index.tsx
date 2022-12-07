@@ -33,7 +33,7 @@ const Home: NextPage = () => {
         </div>
         <div className="absolute z-10 mt-[55vh] flex flex-col lg:mt-[70vh] xl:mt-[80vh] 2xl:mt-[80vh]">
           <div className="h-0 w-0 border-l-[100vw] border-t-[10vh] border-t-transparent border-l-blue-2" />
-          <div className="flex h-[10vh] w-full justify-center bg-blue-2 px-5">
+          <div className="flex h-[20vh] w-full items-center justify-center bg-blue-2 px-5">
             <h1 className="text-center font-h text-3xl text-white xl:text-4xl 2xl:text-5xl">
               Лыжный Инструктор
             </h1>
