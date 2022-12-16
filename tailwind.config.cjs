@@ -5,6 +5,7 @@ module.exports = {
     fontFamily: {
       h: ["Comfortaa", "cursive"],
       text: ["Balsamiq Sans", "cursive"],
+      logo: ["Russo One", "sans-serif"],
     },
     extend: {
       colors: {

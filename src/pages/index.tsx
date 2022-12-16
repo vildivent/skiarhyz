@@ -10,25 +10,20 @@ import Special from "../components/Sections/Special";
 import VIP from "../components/Sections/VIP";
 import VideoRecordings from "../components/Sections/VideoRecordings";
 import Footer from "../components/Footer";
+import Navbar from "../components/layouts/Navbar";
 
 const Home: NextPage = () => {
   return (
-    <>
+    <div>
       <Head>
         <title>Главная | Инструктор по горным лыжам</title>
         <meta name="description" content="Инструктор по горным лыжам" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+      <Navbar />
+      <main className="relative flex min-h-screen w-full flex-col">
         <div className="absolute z-10 h-20 w-full bg-gradient-to-b from-[#2A3061] to-transparent opacity-50 sm:h-52" />
-        <nav className="z-20 w-full">
-          <ul className="hidden justify-center gap-10 font-bold text-white sm:flex">
-            <li>Навигация</li>
-            <li>Навигация</li>
-            <li>Навигация</li>
-          </ul>
-        </nav>
-        <div className="absolute h-[70vh] w-screen select-none lg:h-[90vh] 2xl:h-[90vh]">
+        <div className="absolute h-[70vh] w-full select-none lg:h-[90vh] 2xl:h-[90vh]">
           <Image
             src="/homepageHead1.jpg"
             alt="Инструктор на склоне"
@@ -38,24 +33,23 @@ const Home: NextPage = () => {
             className="object-cover object-top"
           />
         </div>
-        <div
-          id="containerElement"
-          className="absolute z-10 mt-[55vh] flex flex-col lg:mt-[70vh] xl:mt-[80vh] 2xl:mt-[80vh]"
-        >
-          <div className="h-0 w-0 border-l-[100vw] border-t-[10vh] border-t-transparent border-l-blue-2" />
-          <div className="flex h-[20vh] items-center justify-center bg-blue-2 px-5">
-            <h1 className="translate-y-[-8px] text-center font-h text-3xl font-bold text-white xl:text-4xl 2xl:text-5xl">
+        <div className="absolute z-10 mt-[55vh] flex flex-col lg:mt-[70vh] xl:mt-[80vh] 2xl:mt-[80vh]">
+          <div
+            className="flex h-[35vh] items-center justify-center bg-blue-3 px-5"
+            style={{
+              clipPath: "polygon(0 0, 0 86%, 100% 100%, 100% 29%)",
+            }}
+          >
+            <h1 className=" text-center font-h text-3xl font-bold text-white xl:text-4xl 2xl:text-5xl">
               Горнолыжный <br />
               Инструктор
             </h1>
             <div className="w-[15%]" />
           </div>
-          <div className="h-0 w-0 border-r-[100vw] border-b-[5vh] border-b-transparent border-r-blue-2" />
 
           <About />
           <Offers />
-
-          <div className="relative h-[40vh] w-screen">
+          <div className="relative h-[40vh] w-full">
             <Image
               src="/mountain.jpg"
               alt="Горы"
@@ -70,7 +64,7 @@ const Home: NextPage = () => {
           <Special />
           <VIP />
           <VideoRecordings />
-          <div className="relative h-[60vh] w-[100vw]">
+          <div className="relative h-[60vh] w-full overflow-hidden">
             <Image
               src="/mountains2.jpg"
               alt="Горы"
@@ -81,7 +75,7 @@ const Home: NextPage = () => {
           <Footer />
         </div>
       </main>
-    </>
+    </div>
   );
 };
 
