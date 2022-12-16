@@ -1,0 +1,42 @@
+import { type ReactNode } from "react";
+
+type TextCardProps = {
+  children: ReactNode;
+  type?: "right" | "left";
+  margin?: string;
+};
+
+const TextCard = ({ children, type = "right", margin }: TextCardProps) => {
+  return (
+    <div
+      className="z-[1] w-full lg:w-1/2"
+      style={{
+        filter: "drop-shadow(-1px 6px 3px rgba(34, 60, 80, 0.2))",
+      }}
+    >
+      <div
+        className="h-10 w-full bg-white-1"
+        style={{
+          clipPath:
+            type === "right"
+              ? "polygon(0% 0%, 0% 100%, 100% 100%)"
+              : "polygon(100% 0%, 0% 100%, 100% 100%)",
+        }}
+      />
+      <div className="flex flex-col gap-5 bg-white-1 p-7 sm:px-16 sm:py-10 md:px-24 md:py-16">
+        {children}
+      </div>
+      <div
+        className={`h-7 w-full bg-white-1 ${margin}`}
+        style={{
+          clipPath:
+            type === "right"
+              ? "polygon(0% 0%, 0% 100%, 100% 0%)"
+              : "polygon(0% 0%, 100% 0%, 100% 100%)",
+        }}
+      />
+    </div>
+  );
+};
+
+export default TextCard;
