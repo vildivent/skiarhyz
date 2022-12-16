@@ -32,7 +32,7 @@ const VideoRecordings = () => {
           src="/video-recording.jpg"
           alt="Видео съёмка"
           fill
-          className="object-contain object-center shadow-lg"
+          className="object-cover object-center shadow-lg"
           sizes="(max-width: 640px) 90vw,
                 (max-width: 768px) 70vw,
                  40vw"

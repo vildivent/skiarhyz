@@ -1,25 +1,19 @@
-import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
 const useNavbarOnScroll = () => {
   const hideIndent = 80;
-  const { pathname } = useRouter();
   const [isBrowser, setIsBrowser] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [showNavbar, setShowNavbar] = useState(true);
-  const [transparentStyle, setTransparentStyle] = useState(
-    pathname === "/" ? true : false
-  );
+  const [transparentStyle, setTransparentStyle] = useState(true);
 
   useEffect(() => {
     setIsBrowser(true);
     if (isBrowser) {
-      if (pathname === "/") {
-        if (window.scrollY > hideIndent) setTransparentStyle(false);
-        else setTransparentStyle(true);
-      }
+      if (window.scrollY > hideIndent) setTransparentStyle(false);
+      else setTransparentStyle(true);
     }
-  }, [isBrowser, pathname]);
+  }, [isBrowser]);
 
   useEffect(() => {
     const controlNavbar = () => {
@@ -28,10 +22,8 @@ const useNavbarOnScroll = () => {
           setShowNavbar(false); // if scroll down hide the navbar
         else setShowNavbar(true); // if scroll up show the navbar
 
-        if (pathname === "/") {
-          if (window.scrollY > hideIndent) setTransparentStyle(false);
-          else setTransparentStyle(true);
-        }
+        if (window.scrollY > hideIndent) setTransparentStyle(false);
+        else setTransparentStyle(true);
 
         // remember current page location to use in the next move
         setLastScrollY(window.scrollY);
@@ -44,7 +36,7 @@ const useNavbarOnScroll = () => {
         window.removeEventListener("scroll", controlNavbar);
       };
     }
-  }, [isBrowser, lastScrollY, pathname]);
+  }, [isBrowser, lastScrollY]);
 
   return { showNavbar, transparentStyle };
 };

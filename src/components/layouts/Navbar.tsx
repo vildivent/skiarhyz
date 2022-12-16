@@ -14,7 +14,7 @@ const Navbar = () => {
       } ${transparentStyle ? "text-white" : "bg-white text-blue-3 shadow-md"}`}
     >
       <Link href="/" className="ml-5 flex items-center sm:ml-20">
-        <Logo />
+        <Logo blue={!transparentStyle} />
       </Link>
 
       <ul className="hidden items-center gap-5 sm:flex">

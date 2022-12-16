@@ -12,7 +12,7 @@ const Childrens = () => {
           src="/childrens.jpg"
           alt="Детские занятия"
           fill
-          className="object-contain object-center"
+          className="object-cover object-center shadow-lg"
           sizes="(max-width: 640px) 90vw,
                 (max-width: 768px) 70vw,
                  40vw"
