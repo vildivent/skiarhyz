@@ -41,8 +41,8 @@ const About = () => {
             Основываясь на разработках коллег из Австрии, постоянно адаптирую
             методику обучения к нашей российской действительности.
           </p>
-          <Link href="/contacts">
-            <button className="mx-auto bg-orange-1 py-2 px-16 font-bold text-gray-3 hover:bg-orange-400">
+          <Link href="/contacts" className="mx-auto">
+            <button className="bg-orange-1 py-2 px-16 font-bold text-gray-3 hover:bg-orange-400">
               Записаться
             </button>
           </Link>
