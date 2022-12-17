@@ -1,5 +1,6 @@
 import Image from "next/image";
 import TextCard from "../TextCard";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -39,9 +40,11 @@ const About = () => {
             Основываясь на разработках коллег из Австрии, постоянно адаптирую
             методику обучения к нашей российской действительности.
           </p>
-          <button className="mx-auto bg-orange-1 py-2 px-16 font-bold text-gray-3 hover:bg-orange-400">
-            Записаться
-          </button>
+          <Link href="/contacts">
+            <button className="mx-auto bg-orange-1 py-2 px-16 font-bold text-gray-3 hover:bg-orange-400">
+              Записаться
+            </button>
+          </Link>
         </TextCard>
         <div className="relative mt-auto flex h-[90vw] w-[70vw] sm:h-[60vw] sm:w-[40vw]">
           <Image
