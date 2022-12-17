@@ -1,5 +1,6 @@
 import Image from "next/image";
 import TextCard from "../TextCard";
+import { specialPhoto } from "../../../public";
 
 const Special = () => {
   return (
@@ -9,12 +10,12 @@ const Special = () => {
     >
       <div className="absolute z-[0] h-full w-full select-none">
         <Image
-          src="/special.jpg"
-          alt="Инструктор на склоне"
+          src={specialPhoto}
+          alt="Лыжник в лесу"
           fill
-          priority
           draggable="false"
           className="object-cover object-top"
+          placeholder="blur"
         />
       </div>
       <TextCard type="right">

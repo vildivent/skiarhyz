@@ -1,5 +1,6 @@
 import Image from "next/image";
 import TextCard from "../TextCard";
+import { vipPhoto } from "../../../public";
 
 const VIP = () => {
   return (
@@ -19,13 +20,14 @@ const VIP = () => {
       </div>
       <div className="relative z-[1] flex h-[60vw] w-[90vw] items-center md:h-[47vw] md:w-[70vw] lg:h-[27vw] lg:w-[40vw]">
         <Image
-          src="/vip.jpg"
+          src={vipPhoto}
           alt="VIP день"
           fill
           className="object-contain object-center"
           sizes="(max-width: 640px) 90vw,
         (max-width: 768px) 70vw,
          40vw"
+          placeholder="blur"
         />
       </div>
       <TextCard type="left">

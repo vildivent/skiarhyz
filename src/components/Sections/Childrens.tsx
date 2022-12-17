@@ -1,5 +1,6 @@
 import Image from "next/image";
 import TextCard from "../TextCard";
+import { childrensPhoto } from "../../../public";
 
 const Childrens = () => {
   return (
@@ -9,13 +10,14 @@ const Childrens = () => {
     >
       <div className="relative flex h-[60vw] w-[90vw] items-center md:h-[47vw] md:w-[70vw] lg:h-[27vw] lg:w-[40vw]">
         <Image
-          src="/childrens.jpg"
+          src={childrensPhoto}
           alt="Детские занятия"
           fill
           className="object-cover object-center shadow-lg"
           sizes="(max-width: 640px) 90vw,
                 (max-width: 768px) 70vw,
                  40vw"
+          placeholder="blur"
         />
       </div>
       <TextCard type="left">

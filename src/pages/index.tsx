@@ -10,6 +10,7 @@ import Special from "../components/Sections/Special";
 import VIP from "../components/Sections/VIP";
 import VideoRecordings from "../components/Sections/VideoRecordings";
 import MainLayout from "../components/layouts/MainLayout";
+import { headImage1, mountainsPhoto1, mountainsPhoto2 } from "../../public";
 
 const Home: NextPage = () => {
   return (
@@ -28,17 +29,18 @@ const Home: NextPage = () => {
             <>Инструктор</>
           </>
         }
-        imgSrc="/head-image1.jpg"
+        imgSrc={headImage1}
         alt="Инструктор на склоне"
       >
         <About />
         <Offers />
         <div className="relative h-[40vh] w-full">
           <Image
-            src="/mountain.jpg"
+            src={mountainsPhoto1}
             alt="Горы"
             fill
             className="object-cover object-center"
+            placeholder="blur"
           />
         </div>
 
@@ -50,10 +52,11 @@ const Home: NextPage = () => {
         <VideoRecordings />
         <div className="relative h-[60vh] w-full overflow-hidden">
           <Image
-            src="/mountains2.jpg"
+            src={mountainsPhoto2}
             alt="Горы"
             fill
             className="object-cover object-top"
+            placeholder="blur"
           />
         </div>
       </MainLayout>

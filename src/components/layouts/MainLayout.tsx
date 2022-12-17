@@ -1,12 +1,12 @@
 import { type ReactNode, useState, useEffect } from "react";
 import Footer from "../Footer";
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 
 type MainLayoutProps = {
   children: ReactNode;
-  imgSrc: string;
+  imgSrc: string | StaticImageData;
   alt: string;
   title: ReactNode;
 };
@@ -35,6 +35,7 @@ const MainLayout = ({ children, imgSrc, alt, title }: MainLayoutProps) => {
             priority
             draggable="false"
             className="object-cover object-center"
+            placeholder="blur"
           />
         </div>
 

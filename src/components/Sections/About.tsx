@@ -1,6 +1,7 @@
 import Image from "next/image";
 import TextCard from "../TextCard";
 import Link from "next/link";
+import { heroPhoto } from "../../../public";
 
 const About = () => {
   return (
@@ -48,11 +49,13 @@ const About = () => {
         </TextCard>
         <div className="relative mt-auto flex h-[90vw] w-[70vw] sm:h-[60vw] sm:w-[40vw]">
           <Image
-            src="/hero.png"
+            src={heroPhoto}
             alt="Инструктор портрет"
             fill
+            priority
             className="object-contain object-bottom"
             sizes="(max-width: 640px) 70vw, 40vw"
+            placeholder="blur"
           />
         </div>
       </div>

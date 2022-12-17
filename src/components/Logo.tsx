@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { logoBlue, logoWhite } from "../../public";
 
 type LogoProps = {
   blue?: boolean;
@@ -8,7 +9,7 @@ const Logo = ({ blue = false }: LogoProps) => {
   return (
     <div className="flex items-center gap-2">
       <Image
-        src={blue ? "/logo-blue.svg" : "/logo.svg"}
+        src={blue ? logoBlue : logoWhite}
         alt="logo"
         width={40}
         height={40}

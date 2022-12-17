@@ -1,6 +1,7 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import MainLayout from "../components/layouts/MainLayout";
+import { headImage2 } from "../../public";
 
 const prices: NextPage = () => {
   return (
@@ -11,7 +12,7 @@ const prices: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <MainLayout title="Цены" imgSrc="/head-image2.jpg" alt="Зимние горы">
+      <MainLayout title="Цены" imgSrc={headImage2} alt="Зимние горы">
         Цены
       </MainLayout>
     </>
