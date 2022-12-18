@@ -6,8 +6,7 @@ import headImage2 from "./head-image2.jpg";
 import headImage3 from "./head-image3.jpg";
 import heroPhoto from "./hero.png";
 import individualPhoto from "./individual.png";
-import logoBlue from "./logo-blue.svg";
-import logoWhite from "./logo.svg";
+import logo from "./logo.svg";
 import mountainsPhoto1 from "./mountain.jpg";
 import mountainsPhoto2 from "./mountains2.jpg";
 import specialPhoto from "./special.jpg";
@@ -24,8 +23,7 @@ export {
   headImage3,
   heroPhoto,
   individualPhoto,
-  logoBlue,
-  logoWhite,
+  logo,
   mountainsPhoto1,
   mountainsPhoto2,
   specialPhoto,

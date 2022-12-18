@@ -13,7 +13,7 @@ import MainLayout from "../components/layouts/MainLayout";
 import { headImage1, mountainsPhoto1, mountainsPhoto2 } from "../../public";
 
 export const imgUrl =
-  "https://skiarhyz.ru/_next/static/media/icon.551becfe.png";
+  "https://skiarhyz.ru/_next/static/media/icon.c29e84ac.png";
 
 const Home: NextPage = () => {
   return (
