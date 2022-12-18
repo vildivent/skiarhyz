@@ -9,14 +9,25 @@ import {
   vkIconColor,
   whatsappIconColor,
 } from "../../public/socials/color";
+import { imgUrl } from ".";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { icon } from "../../public";
 
 const Contacts: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Контакты | Инструктор по горным лыжам</title>
+        <title>Контакты | Дмитрий Инструктор по горным лыжам</title>
         <meta name="description" content="Контакты" />
         <link rel="icon" href="/favicon.ico" />
+        <meta name="image" content={imgUrl} />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Контакты | Дмитрий Инструктор по горным лыжам"
+        />
+        <meta property="og:description" content="Контакты" />
+        <meta property="og:image" itemProp="image" content={imgUrl} />
       </Head>
 
       <MainLayout title="Контакты" imgSrc={headImage3} alt="Зимний лес">

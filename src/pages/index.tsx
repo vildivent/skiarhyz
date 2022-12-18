@@ -12,13 +12,21 @@ import VideoRecordings from "../components/Sections/VideoRecordings";
 import MainLayout from "../components/layouts/MainLayout";
 import { headImage1, mountainsPhoto1, mountainsPhoto2 } from "../../public";
 
+export const imgUrl =
+  "https://skiarhyz.ru/_next/static/media/icon.551becfe.png";
+
 const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Главная | Инструктор по горным лыжам</title>
+        <title>Дмитрий | Архыз</title>
         <meta name="description" content="Инструктор по горным лыжам" />
         <link rel="icon" href="/favicon.ico" />
+        <meta name="image" content={imgUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Дмитрий | Архыз" />
+        <meta property="og:description" content="Инструктор по горным лыжам" />
+        <meta property="og:image" itemProp="image" content={imgUrl} />
       </Head>
 
       <MainLayout

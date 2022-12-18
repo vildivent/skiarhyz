@@ -13,6 +13,7 @@ import mountainsPhoto2 from "./mountains2.jpg";
 import specialPhoto from "./special.jpg";
 import videoRecordingPhoto from "./video-recording.jpg";
 import vipPhoto from "./vip.jpg";
+import icon from "./icon.png";
 
 export {
   childrensPhoto,
@@ -30,4 +31,5 @@ export {
   specialPhoto,
   videoRecordingPhoto,
   vipPhoto,
+  icon,
 };

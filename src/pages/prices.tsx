@@ -2,14 +2,23 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import MainLayout from "../components/layouts/MainLayout";
 import { headImage2 } from "../../public";
+import { imgUrl } from ".";
 
 const Prices: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Цены | Инструктор по горным лыжам</title>
-        <meta name="description" content="Цены на услуги" />
+        <title>Цены | Дмитрий Инструктор по горным лыжам</title>
+        <meta name="description" content="Цены" />
         <link rel="icon" href="/favicon.ico" />
+        <meta name="image" content={imgUrl} />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Цены | Дмитрий Инструктор по горным лыжам"
+        />
+        <meta property="og:description" content="Цены" />
+        <meta property="og:image" itemProp="image" content={imgUrl} />
       </Head>
 
       <MainLayout title="Цены" imgSrc={headImage2} alt="Зимние горы">
