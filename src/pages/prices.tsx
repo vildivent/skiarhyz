@@ -3,12 +3,12 @@ import Head from "next/head";
 import MainLayout from "../components/layouts/MainLayout";
 import { headImage2 } from "../../public";
 
-const prices: NextPage = () => {
+const Prices: NextPage = () => {
   return (
     <>
       <Head>
         <title>Цены | Инструктор по горным лыжам</title>
-        <meta name="description" content="Инструктор по горным лыжам, цены" />
+        <meta name="description" content="Цены на услуги" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -160,4 +160,4 @@ const prices: NextPage = () => {
   );
 };
 
-export default prices;
+export default Prices;

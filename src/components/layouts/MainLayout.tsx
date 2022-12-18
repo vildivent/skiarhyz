@@ -63,7 +63,7 @@ const MainLayout = ({ children, imgSrc, alt, title }: MainLayoutProps) => {
           {children}
           <Footer />
           <ScrollToTop
-            style={{ backgroundColor: "#cccccc" }}
+            style={{ backgroundColor: "#cccccc", zIndex: 100 }}
             component={
               <span className="flex items-center justify-center text-3xl">
                 <IoIosArrowUp />
