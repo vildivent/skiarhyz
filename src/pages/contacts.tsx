@@ -32,7 +32,7 @@ const Contacts: NextPage = () => {
 
       <MainLayout title="Контакты" imgSrc={headImage3} alt="Зимний лес">
         <div className="my-5 flex flex-col items-center gap-5">
-          <p className="text-center">
+          <p className="mx-5 text-center">
             Для записи на занятие свяжитесь со мной одним из следующих способов:
           </p>
 
