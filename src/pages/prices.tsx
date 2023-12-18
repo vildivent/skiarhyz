@@ -219,56 +219,6 @@ const Prices: NextPage = () => {
               <td>4900</td>
             </tr>
           </tbody>
-          <thead>
-            <tr>
-              <th colSpan={4} className="bg-white-1">
-                <div className="flex flex-col">
-                  <span>Фристайл</span>
-                  <span className="font-normal italic">
-                    обучение инструктором специальной категории
-                  </span>
-                </div>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td colSpan={4}>Индивидуальные занятия</td>
-            </tr>
-            <tr>
-              <td>1 час</td>
-              <td>4000</td>
-              <td>4500</td>
-              <td>5000</td>
-            </tr>
-            <tr>
-              <td>1,5 часа</td>
-              <td>5000</td>
-              <td>5500</td>
-              <td>6000</td>
-            </tr>
-            <tr>
-              <td>2 часа</td>
-              <td>6000</td>
-              <td>6500</td>
-              <td>7000</td>
-            </tr>
-            <tr>
-              <td colSpan={4}>Группа 2-5 чел.</td>
-            </tr>
-            <tr>
-              <td>1,5 часа</td>
-              <td>3500</td>
-              <td>3800</td>
-              <td>4200</td>
-            </tr>
-            <tr>
-              <td>2 часа</td>
-              <td>4200</td>
-              <td>4500</td>
-              <td>4900</td>
-            </tr>
-          </tbody>
 
           <thead>
             <tr>
