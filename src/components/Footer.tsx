@@ -45,7 +45,7 @@ const Footer = () => {
         }}
       />
 
-      <span className="absolute bottom-0 z-[3] py-5">© 2023</span>
+      <span className="absolute bottom-0 z-[3] py-5">© 2023 - 2024</span>
     </div>
   );
 };
