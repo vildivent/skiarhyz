@@ -1,24 +1,44 @@
-import { type NextPage } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
-import Head from "next/head";
-import About from "../components/Sections/About";
-import Offers from "../components/Sections/Offers";
-import Personal from "../components/Sections/Personal";
-import Group from "../components/Sections/Group";
-import Childrens from "../components/Sections/Childrens";
-import Special from "../components/Sections/Special";
-import VIP from "../components/Sections/VIP";
-import VideoRecordings from "../components/Sections/VideoRecordings";
-import MainLayout from "../components/layouts/MainLayout";
+
+import MainLayout from "~/components/layouts/MainLayout";
+import About from "~/components/Sections/About";
+import Childrens from "~/components/Sections/Childrens";
+import Group from "~/components/Sections/Group";
+import Offers from "~/components/Sections/Offers";
+import Personal from "~/components/Sections/Personal";
+import Special from "~/components/Sections/Special";
+import VIP from "~/components/Sections/VIP";
+
+import { telMain } from "~/shared/config/constants";
+import { env } from "~/shared/config/env";
 import { headImage1, mountainsPhoto1, mountainsPhoto2 } from "../../public";
+
+const title = "Дмитрий | Архыз";
+const description = "Инструктор по горным лыжам";
+
+export const metadata: Metadata = {
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    type: "website",
+    url: `${env.BASE_URL}`,
+    phoneNumbers: telMain,
+  },
+  alternates: {
+    canonical: `${env.BASE_URL}`,
+  },
+};
 
 export const imgUrl =
   "https://skiarhyz.ru/_next/static/media/icon.c29e84ac.png";
 
-const Home: NextPage = () => {
+export default function HomePage() {
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Дмитрий | Архыз</title>
         <meta name="description" content="Инструктор по горным лыжам" />
         <link rel="icon" href="/favicon.ico" />
@@ -27,14 +47,14 @@ const Home: NextPage = () => {
         <meta property="og:title" content="Дмитрий | Архыз" />
         <meta property="og:description" content="Инструктор по горным лыжам" />
         <meta property="og:image" itemProp="image" content={imgUrl} />
-      </Head>
+      </Head> */}
 
       <MainLayout
         title={
           <>
-            <>Горнолыжный</>
+            Горнолыжный
             <br />
-            <>Инструктор</>
+            Инструктор
           </>
         }
         imgSrc={headImage1}
@@ -57,7 +77,6 @@ const Home: NextPage = () => {
         <Childrens />
         <Special />
         <VIP />
-        <VideoRecordings />
         <div className="relative h-[60vh] w-full overflow-hidden">
           <Image
             src={mountainsPhoto2}
@@ -70,6 +89,4 @@ const Home: NextPage = () => {
       </MainLayout>
     </>
   );
-};
-
-export default Home;
+}

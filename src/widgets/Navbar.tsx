@@ -1,9 +1,11 @@
-import { useRouter } from "next/router";
-import Logo from "../Logo";
+"use client";
+
 import Link from "next/link";
-import useNavbarOnScroll from "../../utils/hooks/useNavbarOnScroll";
-import { IoIosArrowDown } from "react-icons/io";
+import { usePathname } from "next/navigation";
 import { type Dispatch, type SetStateAction } from "react";
+import { IoIosArrowDown } from "react-icons/io";
+import useNavbarOnScroll from "../shared/lib/useNavbarOnScroll";
+import Logo from "../components/Logo";
 
 type NavbarProps = {
   sidebarOpen: boolean;
@@ -11,14 +13,14 @@ type NavbarProps = {
 };
 
 const Navbar = ({ sidebarOpen, setSidebarOpen }: NavbarProps) => {
-  const router = useRouter();
+  const pathname = usePathname();
   const { showNavbar, transparentStyle } = useNavbarOnScroll();
 
   return (
     <nav
-      className={`gap-15 fixed top-0 z-20 flex w-full gap-10 transition-all duration-300 ${
-        showNavbar ? "" : "pointer-events-none translate-y-[-3rem] opacity-0"
-      } ${transparentStyle ? "text-white" : "bg-white text-blue-3 shadow-md"}`}
+      className={`fixed top-0 z-20 flex w-full gap-10 shadow-md transition-all duration-300 ${
+        showNavbar ? "" : "pointer-events-none -translate-y-12 opacity-0"
+      } ${transparentStyle ? "text-white backdrop-blur-md" : "text-blue-3 bg-white"}`}
     >
       <Link href="/" className="ml-5 flex items-center sm:ml-20">
         <Logo blue={!transparentStyle} />
@@ -41,7 +43,7 @@ const Navbar = ({ sidebarOpen, setSidebarOpen }: NavbarProps) => {
           <li
             key={navLink.id}
             className={`${
-              router.pathname === navLink.id
+              pathname === navLink.id
                 ? `${transparentStyle ? "text-gray-1" : "text-gray-2"}`
                 : ""
             } ${transparentStyle ? "hover:text-gray-1" : "hover:text-gray-2"}`}

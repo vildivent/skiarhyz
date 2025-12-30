@@ -1,8 +1,10 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { type Dispatch, type SetStateAction } from "react";
-import { useRouter } from "next/router";
 import { IoClose } from "react-icons/io5";
 import { navLinks } from "./Navbar";
-import Link from "next/link";
 
 type SidebarProps = {
   sidebarOpen: boolean;
@@ -10,20 +12,20 @@ type SidebarProps = {
 };
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
-  const router = useRouter();
+  const pathname = usePathname();
   return (
     <div
-      className={`fixed top-0 left-0 z-30 text-blue-3 ${
+      className={`text-blue-3 fixed top-0 left-0 z-30 ${
         sidebarOpen ? "h-screen w-screen" : "pointer-events-none h-0 w-0"
       }`}
     >
       <div
-        className="z-0 h-full w-full bg-gray-5 opacity-50"
+        className="bg-gray-5 z-0 h-full w-full opacity-50"
         onClick={() => setSidebarOpen(false)}
       />
       <div
-        className={`fixed top-0 left-0 z-[1] flex flex-col items-end bg-white pb-10 transition-all duration-300 ${
-          sidebarOpen ? "" : "translate-x-[-15rem]"
+        className={`fixed top-0 left-0 z-1 flex flex-col items-end bg-white pb-10 transition-all duration-300 ${
+          sidebarOpen ? "" : "-translate-x-60"
         }`}
       >
         <button
@@ -31,7 +33,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
           onClick={() => setSidebarOpen(false)}
           className="p-3"
         >
-          <IoClose className="text-3xl transition-transform duration-300 hover:rotate-90 hover:text-gray-2" />
+          <IoClose className="hover:text-gray-2 text-3xl transition-transform duration-300 hover:rotate-90" />
         </button>
 
         <ul className="flex flex-col">
@@ -39,8 +41,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
             <Link href={navLink.id} key={navLink.id}>
               <li
                 className={`${
-                  router.pathname === navLink.id ? "text-gray-2" : ""
-                } min-w-[12rem] p-3 font-bold hover:bg-gray-100`}
+                  pathname === navLink.id ? "text-gray-2" : ""
+                } min-w-48 p-3 font-bold hover:bg-gray-100`}
               >
                 <span className="">{navLink.title}</span>
               </li>

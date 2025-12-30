@@ -1,6 +1,6 @@
 # Инструктор по горным лыжам
 
-[`https://skiarhyz.vercel.app/`](https://skiarhyz.vercel.app/)
+[`https://skiarhyz.ru/`](https://skiarhyz.ru/)
 
 Этот проект представляет из себя вебсайт.
 

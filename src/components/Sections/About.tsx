@@ -1,12 +1,14 @@
+import { formatDistance, formatDistanceStrict } from "date-fns";
+import { ru } from "date-fns/locale";
 import Image from "next/image";
-import TextCard from "../TextCard";
 import Link from "next/link";
 import { heroPhoto } from "../../../public";
+import TextCard from "../TextCard";
 
 const About = () => {
   return (
     <section className="flex flex-col gap-5 px-5 pt-5 lg:px-10 2xl:px-32">
-      <h2 className="text-center font-h text-2xl font-bold text-blue-4 xl:text-3xl 2xl:text-4xl">
+      <h2 className="font-h text-blue-4 text-center text-2xl font-bold xl:text-3xl 2xl:text-4xl">
         Дмитрий
       </h2>
       <div className="flex flex-col items-center justify-start lg:flex-row lg:justify-around">
@@ -27,10 +29,20 @@ const About = () => {
               <br />
               (высшее педагогическое государственное образование)
             </li>
-            <li>Член Федерации спортивного туризма КЧР</li>
+            <li>
+              Инструктор по горнолыжному спорту (Высшее образование "Физическая
+              культура и спорт")
+            </li>
           </ul>
-          <p className="font-bold text-gray-3">
-            Стаж катания 17 лет, стаж работы Инструктором 7 лет
+          <p className="text-gray-3 font-bold">
+            Стаж катания{" "}
+            {formatDistanceStrict(new Date(2005, 12, 1), new Date(), {
+              locale: ru,
+            })}
+            , стаж работы Инструктором{" "}
+            {formatDistanceStrict(new Date(2018, 12, 1), new Date(), {
+              locale: ru,
+            })}
           </p>
           <p>
             Предоставляю услуги по обучению горным лыжам взрослых и детей,
@@ -42,7 +54,7 @@ const About = () => {
             методику обучения к нашей российской действительности.
           </p>
           <Link href="/contacts" className="mx-auto">
-            <button className="bg-orange-1 py-2 px-16 font-bold text-gray-3 hover:bg-orange-400">
+            <button className="bg-orange-1 text-gray-3 px-16 py-2 font-bold hover:bg-orange-400">
               Записаться
             </button>
           </Link>

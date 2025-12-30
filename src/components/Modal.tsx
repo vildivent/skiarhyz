@@ -1,3 +1,5 @@
+"use client";
+
 import type { Dispatch, ReactNode, SetStateAction } from "react";
 import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
@@ -40,7 +42,7 @@ const Modal = ({
       >
         <IoClose
           onClick={() => setIsOpen(false)}
-          className="absolute top-5 right-5 cursor-pointer text-3xl transition-transform duration-300 hover:rotate-90 hover:text-blue-3"
+          className="hover:text-blue-3 absolute top-5 right-5 cursor-pointer text-3xl transition-transform duration-300 hover:rotate-90"
         />
 
         {children}
