@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Comfortaa:wght@400;600;700&family=Russo+One&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Comfortaa:wght@400;600;700&family=Russo+One&display=swap"); */
 
 @import "tailwindcss";
 
 @theme {
   --font-h: var(--font-comfortaa), sans-serif;
-  --font-text: var(--font-mulish), sans-serif;
-  --font-logo: var(--font-russoOne), sans-serif;
+  --font-text: var(--font-balsamiq-sans), sans-serif;
+  --font-logo: var(--font-russo-one), sans-serif;
 
   --color-blue-1: hsl(201, 57%, 75%);
   --color-blue-2: hsl(207, 55%, 46%);
@@ -26,7 +26,6 @@
 @layer base {
   * {
     min-width: 0;
-    font-family: "Balsamiq Sans", cursive;
     /* color: #474e52; */
 
     /* Scrollbar */
@@ -52,6 +51,10 @@
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    body {
+      font-family: var(--font-text);
     }
 
     table,

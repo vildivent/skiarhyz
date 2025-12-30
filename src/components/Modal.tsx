@@ -1,7 +1,7 @@
 "use client";
 
 import type { Dispatch, ReactNode, SetStateAction } from "react";
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { IoClose } from "react-icons/io5";
 
@@ -31,7 +31,7 @@ const Modal = ({
     <div
       className={`${
         isOpen ? "opacity-100" : "pointer-events-none opacity-0"
-      } ${position} top-0 left-0 z-[1000] flex h-full w-full items-center justify-center transition-opacity duration-200`}
+      } ${position} top-0 left-0 z-1000 flex h-full w-full items-center justify-center transition-opacity duration-200`}
       onClick={() => setIsOpen(false)}
     >
       <div

@@ -14,13 +14,14 @@ type NavbarProps = {
 
 const Navbar = ({ sidebarOpen, setSidebarOpen }: NavbarProps) => {
   const pathname = usePathname();
-  const { showNavbar, transparentStyle } = useNavbarOnScroll();
+  const { transparentStyle } = useNavbarOnScroll();
+  const showNavbar = true;
 
   return (
     <nav
-      className={`fixed top-0 z-20 flex w-full gap-10 shadow-md transition-all duration-300 ${
-        showNavbar ? "" : "pointer-events-none -translate-y-12 opacity-0"
-      } ${transparentStyle ? "text-white backdrop-blur-md" : "text-blue-3 bg-white"}`}
+      className={`fixed top-0 z-20 flex w-full gap-10 backdrop-blur-md transition-all duration-300 ${
+        showNavbar ? "" : "pointer-events-none -translate-y-12 opacity-50"
+      } ${transparentStyle ? "text-white" : "text-blue-3 bg-white/75 shadow-md"}`}
     >
       <Link href="/" className="ml-5 flex items-center sm:ml-20">
         <Logo blue={!transparentStyle} />

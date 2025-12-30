@@ -2,7 +2,7 @@ import "~/styles/globals.css";
 
 import { type Metadata } from "next";
 import { cn } from "~/shared/lib/cn";
-import { alegrea, mulish, russoOne } from "./fonts";
+import { alegrea, balsamiqSans, russoOne } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Дмитрий | Архыз",
@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html
       lang="ru"
-      className={cn(alegrea.variable, mulish.variable, russoOne.variable)}
+      className={cn(alegrea.variable, balsamiqSans.variable, russoOne.variable)}
     >
       <body className="min-h-svh w-screen overflow-x-hidden">
         {children}

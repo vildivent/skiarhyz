@@ -6,9 +6,9 @@ const VIP = () => {
   return (
     <section
       id="vip"
-      className="relative flex flex-col-reverse items-center justify-center gap-5 bg-gradient-to-r from-blue-1 to-blue-3 px-5 py-10 lg:flex-row lg:justify-around lg:px-10 2xl:px-32"
+      className="from-blue-1 to-blue-3 relative flex flex-col-reverse items-center justify-center gap-5 bg-linear-to-r px-5 py-10 lg:flex-row lg:justify-around lg:px-10 2xl:px-32"
     >
-      <div className="absolute z-[0] h-full w-full select-none">
+      <div className="absolute z-0 h-full w-full select-none">
         <Image
           src="/forest-bg.jpg"
           alt="Инструктор на склоне"
@@ -18,7 +18,7 @@ const VIP = () => {
           className="object-cover object-center"
         />
       </div>
-      <div className="relative z-[1] flex h-[60vw] w-[90vw] items-center md:h-[47vw] md:w-[70vw] lg:h-[27vw] lg:w-[40vw]">
+      <div className="relative z-1 flex h-[60vw] w-[90vw] items-center md:h-[47vw] md:w-[70vw] lg:h-[27vw] lg:w-[40vw]">
         <Image
           src={vipPhoto}
           alt="VIP день"
@@ -31,7 +31,7 @@ const VIP = () => {
         />
       </div>
       <TextCard type="left">
-        <h2 className="text-center font-h text-2xl font-bold text-blue-4 xl:text-3xl 2xl:text-4xl">
+        <h2 className="font-h text-blue-4 text-center text-2xl font-bold xl:text-3xl 2xl:text-4xl">
           VIP день
         </h2>
         <p>

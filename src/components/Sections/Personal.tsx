@@ -6,7 +6,7 @@ const Personal = () => {
   return (
     <section
       id="personal"
-      className="flex flex-col-reverse items-center justify-center gap-5 bg-gradient-to-b from-blue-1 to-white px-5 py-10 lg:flex-row lg:justify-around lg:px-10 2xl:px-32"
+      className="from-blue-1 flex flex-col-reverse items-center justify-center gap-5 bg-linear-to-b to-white px-5 py-10 lg:flex-row lg:justify-around lg:px-10 2xl:px-32"
     >
       <div className="relative flex h-[60vw] w-[90vw] items-center md:h-[47vw] md:w-[70vw] lg:h-[27vw] lg:w-[40vw]">
         <Image
@@ -21,7 +21,7 @@ const Personal = () => {
         />
       </div>
       <TextCard type="left">
-        <h2 className="text-center font-h text-2xl font-bold text-blue-4 xl:text-3xl 2xl:text-4xl">
+        <h2 className="font-h text-blue-4 text-center text-2xl font-bold xl:text-3xl 2xl:text-4xl">
           Индивидуальные занятия
         </h2>
         <p>
